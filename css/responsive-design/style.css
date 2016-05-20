@@ -37,12 +37,12 @@ figcaption {
 
 #external-links {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   width: 200px;
 }
 
 main {
-  width: 756px;
+  max-width: 756px;
   display: inline-block;
   vertical-align: middle;
 }
