@@ -1,3 +1,7 @@
+body {
+  width: 960px;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -29,4 +33,16 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+#external-links {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+}
+
+main {
+  width: 756px;
+  display: inline-block;
+  vertical-align: middle;
 }
