@@ -46,3 +46,18 @@ main {
   display: inline-block;
   vertical-align: middle;
 }
+
+@media screen and (max-width: 600px) {
+  #external-links {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 0.8em;
+  }
+}
