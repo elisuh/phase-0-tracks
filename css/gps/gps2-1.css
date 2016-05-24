@@ -1,0 +1,54 @@
+body {
+  font-family: courier;
+}
+
+#whale {
+  margin-left: 10%;
+  width: 7em;
+}
+
+header {
+  background-color: #56D0C1;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.column-1 {
+  display: inline-block;
+  margin: 1em;
+  min-height: 70em;
+  vertical-align: top;
+  width: 45%;
+}
+
+.column-2 {
+  display: inline-block;
+  margin: 1em;
+  min-height: 70em;
+  vertical-align: top;
+  width: 45%;
+}
+
+h2 {
+  color: #f2a9eb;
+}
+
+a {
+  text-decoration: none;
+  color: #635561;
+}
+
+a:hover {
+  color: black;
+}
+
+details > p {
+  color: #62c4e1;
+}
+
+footer {
+  background-color: #56D0C1;
+  min-height: 6em;
+  padding-top: 4em;
+  text-align: center;
+}
