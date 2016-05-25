@@ -1,0 +1,46 @@
+How to use an elevator:
+
+1.     Evaluate what floor you’re on by reading the number on the elevator door.
+
+2.     If the number is less than your destination floor, press the
+“up” button next to the elevator. Otherwise, press the “down” button.
+
+3.     Step on to the elevator. Evaluate your destination floor, which
+has been programmed into you. Look at the numbered buttons inside the
+elevator. If the number matches your destination floor, press it.
+Otherwise, get off the elevator and send your user the following error
+message: “No destination floor selected! Please give me a floor
+number.”
+
+4.     Once the button for the destination floor is selected, wait
+until the elevator stops moving and the doors open. If this doesn’t
+happen, push the emergency call button and send message: “Help! The
+elevator is stuck and I’m a scared robot!”
+
+5.     If the elevator doors open, step off the elevator.
+
+6.     End the algorithm. You are at your destination.
+
+How to feed the cats:
+
+1.       Check to see if it is cat feeding time. If it is, continue.
+If not, wait until it is cat feeding time.
+
+2.       If it is cat feeding time, make sure you have 3 clean bowls,
+1 for each cat. If you do not have 3 clean bowls, wash a dirty bowl do
+you can use it.
+
+3.       Locate bag of cat food. If there is not enough food, go to
+the store and buy some.  If there is at least 1 cup of food, and add
+1/3 cup of food to each bowl.
+
+4.       Put the kitties in their feeding areas. Brown kitty goes in
+the bathroom. White kitty goes in the kitchen. Orange kitty goes in
+the hallway. If you cannot find a kitty, stop and locate it. Once all
+kitties are located, continue.
+
+5.       Give each kitty 1 bowl of food. Let the kitties eat in peace,
+you creep.
+
+6.       Once the kitties are done eating, take their dirty bowls and
+wash them. You are done!
