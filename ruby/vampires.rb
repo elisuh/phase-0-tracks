@@ -8,8 +8,19 @@ until i == employee_number
   puts "What is your name?"
   name = gets.chomp
 
+  puts "How old are you?"
+  age = gets.chomp.to_i
+
   puts "What year were you born?"
   birth_year = gets.chomp.to_i
+
+  def age_matches_year
+    if 2016 - birth_year == age
+      age_matches_year = true
+    else
+      agematches_year = false
+  end
+
 
   puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
   garlic_bread = gets.chomp
@@ -17,9 +28,12 @@ until i == employee_number
   puts "Would you like to enroll in the company’s health insurance? (y/n)"
   insurance = gets.chomp
 
-  if birth_year > 1910 && garlic_bread == "y" || insurance == "y"
+  puts "Please list any allergies, one at a time."
+  allergies = gets.chomp
+
+  if age_matches_year = true && garlic_bread == "y" || insurance == "y"
     puts "Probably not a vampire."
-  elsif birth_year < 1910 && garlic_bread == "n" || insurance == "n"
+  elsif age_matches_year = false && garlic_bread == "n" || insurance == "n"
     puts "Probably a vampire."
   elsif garlic_bread == "n" && birth_year < 1910 && insurance == "n"
     puts "Almost certainly a vampire!"
