@@ -1,25 +1,32 @@
+
 puts "How many employees will be processed?"
+employee_number = gets.chomp.to_i
 
-puts "What is your name?"
-name = gets.chomp
+i = 0
+until i == employee_number
 
-puts "What year were you born?"
-birth_year = gets.chomp
+  puts "What is your name?"
+  name = gets.chomp
 
-puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
-garlic_bread = gets.chomp
+  puts "What year were you born?"
+  birth_year = gets.chomp.to_i
 
-puts "Would you like to enroll in the company’s health insurance? (y/n)"
-insurance = gets.chomp
+  puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
+  garlic_bread = gets.chomp
 
-if birth_year > 1910 && garlic_bread == "y" || insurance == "y"
-  puts "Probably not a vampire."
-elsif birth_year < 1910 && garlic_bread == "n" || insurance == "n"
-  puts "Probably a vampire."
-elsif garlic_bread == "n" && birth_year < 1910 && insurance == "n"
-  puts "Almost certainly a vampire!"
-elsif name == "“Drake Cula" || name == "Tu Fang"
-  puts "Definitely a vampire."
-else
-  puts "Results inconclusive."
-end
+  puts "Would you like to enroll in the company’s health insurance? (y/n)"
+  insurance = gets.chomp
+
+  if birth_year > 1910 && garlic_bread == "y" || insurance == "y"
+    puts "Probably not a vampire."
+  elsif birth_year.to_i < 1910 && garlic_bread == "n" || insurance == "n"
+    puts "Probably a vampire."
+  elsif garlic_bread == "n" && birth_year < 1910 && insurance == "n"
+    puts "Almost certainly a vampire!"
+  elsif name == "Drake Cula" || name == "Tu Fang"
+    puts "Definitely a vampire."
+  else
+    puts "Results inconclusive."
+  end
+  i += 1
+end 
