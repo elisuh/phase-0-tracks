@@ -1,13 +1,3 @@
-case vampire
-  when 'probably'
-    puts "Probably a vampire."
-  when 'not'
-    puts "Probably not a vampire."
-  when 'certain'
-    puts "Almost certainly a vampire."
-  when 'definitely'
-    puts "Definitely a vampire."
-end
 
 puts "How many employees will be processed?"
 employee_number = gets.chomp.to_i
@@ -59,7 +49,20 @@ until i == employee_number
   else
     puts "Results inconclusive."
   end
+  
+  case vampire
+  when 'probably'
+    puts "Probably a vampire."
+  when 'not'
+    puts "Probably not a vampire."
+  when 'certain'
+    puts "Almost certainly a vampire."
+  when 'definitely'
+    puts "Definitely a vampire."
+end
 
   i += 1
-  puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 end 
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
