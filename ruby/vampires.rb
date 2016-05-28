@@ -19,7 +19,7 @@ until i == employee_number
 
   if birth_year > 1910 && garlic_bread == "y" || insurance == "y"
     puts "Probably not a vampire."
-  elsif birth_year.to_i < 1910 && garlic_bread == "n" || insurance == "n"
+  elsif birth_year < 1910 && garlic_bread == "n" || insurance == "n"
     puts "Probably a vampire."
   elsif garlic_bread == "n" && birth_year < 1910 && insurance == "n"
     puts "Almost certainly a vampire!"
@@ -28,5 +28,6 @@ until i == employee_number
   else
     puts "Results inconclusive."
   end
+
   i += 1
 end 
