@@ -1,3 +1,5 @@
+puts "How many employees will be processed?"
+
 puts "What is your name?"
 name = gets.chomp
 
@@ -10,13 +12,14 @@ garlic_bread = gets.chomp
 puts "Would you like to enroll in the company’s health insurance? (y/n)"
 insurance = gets.chomp
 
-if garlic_bread == "y" || birth_year > 1910 || insurance == "y"
+if birth_year > 1910 && garlic_bread == "y" || insurance == "y"
   puts "Probably not a vampire."
-if garlic_bread == "n" || birth_year < 1910 || insurance == "n"
+elsif birth_year < 1910 && garlic_bread == "n" || insurance == "n"
   puts "Probably a vampire."
-if garlic_bread == "n" && birth_year < 1910 && insurance == "n"
+elsif garlic_bread == "n" && birth_year < 1910 && insurance == "n"
   puts "Almost certainly a vampire!"
+elsif name == "“Drake Cula" || name == "Tu Fang"
+  puts "Definitely a vampire."
 else
   puts "Results inconclusive."
 end
-
