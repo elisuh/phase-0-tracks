@@ -32,37 +32,38 @@ until i == employee_number
     vampire = 'probably'
   end
 
-  if 2016 - birth_year == age
+  if age == (2016 - birth_year)
     age_matches_year = true
   else
     age_matches_year = false
   end
 
-  if age_matches_year = true && garlic_bread == "y" || insurance == "y"
+  if age_matches_year = true && (garlic_bread == "y" || insurance == "y")
     vampire = 'not'
-  elsif age_matches_year = false && garlic_bread == "n" || insurance == "n"
+  elsif age_matches_year = false && (garlic_bread == "n" || insurance == "n")
     vampire = 'probably'
-  elsif garlic_bread == "n" && birth_year < 1910 && insurance == "n"
+  elsif garlic_bread == "n" && age_matches_year = false && insurance == "n"
     vampire = 'certain'
   elsif name == "Drake Cula" || name == "Tu Fang"
     vampire = 'definitely'
   else
     puts "Results inconclusive."
   end
-  
+
   case vampire
-  when 'probably'
-    puts "Probably a vampire."
-  when 'not'
-    puts "Probably not a vampire."
-  when 'certain'
-    puts "Almost certainly a vampire."
-  when 'definitely'
-    puts "Definitely a vampire."
-end
+    when 'probably'
+      puts "Probably a vampire."
+    when 'not'
+      puts "Probably not a vampire."
+    when 'certain'
+      puts "Almost certainly a vampire."
+    when 'definitely'
+      puts "Definitely a vampire."
+  end
 
   i += 1
 end 
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
 
