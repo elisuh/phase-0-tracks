@@ -1,3 +1,12 @@
+def animal_array(x, y, z)
+	array = [x, y, z]
+end
+
+def add_item(array, item)
+	array << item
+end
+
+
 colors = []
 p colors
 
@@ -22,3 +31,9 @@ shapes = ["circle", "square", "triangle", "rectangle"]
 
 combined_arrays = colors + shapes
 p combined_arrays
+
+p animal_array["cats", "dogs", "chicken"]
+
+p add_item([], "a")
+p add_item(["a", "b", "c", 1, 2], 3)
+p add_item(["what", "am", "i"], "doing")
