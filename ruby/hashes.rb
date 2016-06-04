@@ -23,58 +23,44 @@ puts "Do you like pastels? (y/n)"
 # 	Assign input to liked_pastels
 pastels = gets.chomp
 # 	Define "y" as true and "n" as false
-if pastels == "y"
+	if pastels == "y" or pastels == "Y"
 		pastels = true
-	else
+	elsif pastels == "n" or pastels == "N"
 		pastels = false
-end
+	else puts "I did not understand you, please type y for yes and n for no."
+	end
 # 	Print hash design_client with variables assigned to to corresponding symbols
 design_client = {name: name, age: age, children: children, decor: decor, pastels: pastels}
 print design_client
 # 	Ask user if there are any keys they need to update
 puts "Would you like to update any information? If so, please enter the key. If not, please type 'none'."
 user_change = gets.chomp
-# 	If "none" 
-if user_change = "none"
-#	continue without doing anything
-	break
-# 	elsif "name"
-elsif "name"
-	# 		ask client for their name
+
+case user_answer
+when "name"
 	puts "What is your name?"
-	# 		assign new name to name variable 
 	name = gets.chomp
-# 	elsif "age"
-elsif "age"
-#		ask client for new age
+when "age"
 	puts "How old are you?"
-#		convert string to integer and assign new age to age variable
 	age = gets.chomp.to_i
-# 	elsif "child_number"
-elsif "child_number"
-# 		ask client how many children they have
+when "child_number"
 	puts "How many children do you have?"
-# 		convert string to integer and assign new number to child_number variable
 	children = gets.chomp.to_i
-# 	elsif "decor_theme" 
-elsif "decor_theme"
-	#		ask client for decor theme
+when "decor_theme"
 	puts "What is your decor theme?"
-	# 		assign new theme to decor_theme variable
 	decor_theme = gets.chomp
-# 	elsif "liked_pastels"
-elsif "likes_pastels"
-# 		ask client if they like pastels (y/n)
+when "likes_pastels"
 	puts "Do you like pastels? (y/n)"
-# 		define "y" as true and "n" as false
-# 	else print "I didn't understand you"
-	if pastels == "y"
-		pastels = true
-	else
-		pastels = false
-	end
-# end loop
+		if pastels == "y" or pastels == "Y"
+			pastels = true
+		elsif pastels == "n" or pastels == "N"
+			pastels = false
+		else puts "I did not understand you, please type y for yes and n for no."
+		end
+when "none"
+	puts "All information is up-to-date. Thank you!"
+else "I did not understand you. Please enter a valid key or 'none'."
 end
 # print new hash
-print design_client
+p design_client
 # end program
