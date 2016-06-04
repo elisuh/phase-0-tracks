@@ -23,10 +23,10 @@ puts "Do you like pastels? (y/n)"
 # 	Assign input to liked_pastels
 pastels = gets.chomp
 # 	Define "y" as true and "n" as false
-if pastels = "y"
-		pastels == true
+if pastels == "y"
+		pastels = true
 	else
-		pastels == false
+		pastels = false
 end
 # 	Print hash design_client with variables assigned to to corresponding symbols
 design_client = {name: name, age: age, children: children, decor: decor, pastels: pastels}
@@ -68,10 +68,10 @@ elsif "likes_pastels"
 	puts "Do you like pastels? (y/n)"
 # 		define "y" as true and "n" as false
 # 	else print "I didn't understand you"
-	if pastels = "y"
-		pastels == true
+	if pastels == "y"
+		pastels = true
 	else
-		pastels == false
+		pastels = false
 	end
 # end loop
 end
