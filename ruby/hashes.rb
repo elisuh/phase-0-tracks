@@ -1,6 +1,6 @@
 # PSEUDOCODE FOR INTERIOR DESIGN PROGRAM
 
-# 
+design_client = {}
 # 	Ask client for name
 puts "What is your name?"
 #   Assign name to :name 
@@ -24,10 +24,9 @@ puts "Do you like pastels? (y/n)"
 pastels = gets.chomp
 # 	Define "y" as true and "n" as false
 if pastels = "y"
-		pastels = true
-	elsif pastels = "n"
-		pastels = false
-	else puts "I didn't understand you. Please type 'y' or 'n'."
+		pastels == true
+	else
+		pastels == false
 end
 # 	Print hash design_client with variables assigned to to corresponding symbols
 design_client = {name: name, age: age, children: children, decor: decor, pastels: pastels}
@@ -36,10 +35,9 @@ print design_client
 puts "Would you like to update any information? If so, please enter the key. If not, please type 'none'."
 user_change = gets.chomp
 # 	If "none" 
-
 if user_change = "none"
 #	continue without doing anything
-	next
+	break
 # 	elsif "name"
 elsif "name"
 	# 		ask client for their name
@@ -71,19 +69,12 @@ elsif "likes_pastels"
 # 		define "y" as true and "n" as false
 # 	else print "I didn't understand you"
 	if pastels = "y"
-		pastels = true
-	elsif pastels = "n"
-		pastels = false
-	else puts "I didn't understand you. Please type 'y' or 'n'."
+		pastels == true
+	else
+		pastels == false
 	end
 # end loop
 end
 # print new hash
 print design_client
 # end program
-end
-#
-#
-#
-#
-
