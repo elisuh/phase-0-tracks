@@ -36,7 +36,7 @@ print design_client
 puts "Would you like to update any information? If so, please enter the key. If not, please type 'none'."
 user_change = gets.chomp
 
-case user_answer
+case user_change
 when "name"
 	puts "What is your name?"
 	name = gets.chomp
