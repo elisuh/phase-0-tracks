@@ -1,17 +1,17 @@
-#define a variable to store the encrypted string
-#use a while loop to go through every index in the string
-#inside the loop, check if it's a space character, if it is, do nothing
-#if it's a non-space character, replace that index with the next character
-#return the encrypted string
 
+
+#define a variable to store the encrypted string
 def encrypt(str)
   encrypted = ""
   index = 0
+  #use a while loop to go through every index in the string
   while index < str.length
+    #inside the loop, check if it's a space character, if it is, do nothing
     if str[index] == " "
       encrypted += " "
     else
-      if str[index] == "z"
+    #if it's a non-space character, replace that index with the next character
+      if str[index] == "z" # checks for edge
         encrypted += "a"
       else
         encrypted += str[index].next
@@ -19,29 +19,30 @@ def encrypt(str)
     end
     index = index + 1
   end
+  #return the encrypted string
   return encrypted
 end
 
 #define a variable to store the string
-#use a while loop to go through every index in the string
-#inside the loop, check if it's a space character, if it is, do nothing
-#if it's a non-space character, use a string with all the letters of the alphabet. Identify the position of the character in the string and replace it with the previous character
-#return the decrypted string
-
 def decrypt(str)
   decrypted = ""
   alphabet = "abcdefghijklmnopqrstuvwxyz"
   index = 0
+  #use a while loop to go through every index in the string
   while index < str.length
+    #inside the loop, check if it's a space character, if it is, do nothing
     if str[index] == " "
       decrypted += " "
     else
+      #if it's a non-space character, use a string with all the letters of the alphabet. Identify the position of the character in the string and replace it with the previous character
+
       char_index = alphabet.index(str[index]) - 1 #finding the index of the previous character
       character_to_add = alphabet[char_index] #use the index of the previous character, to find out what that character actually is
       decrypted += character_to_add #add that character onto decrypted
     end
     index = index + 1
   end
+  #return the decrypted string
   return decrypted
 end
 
