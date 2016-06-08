@@ -1,14 +1,30 @@
 #ALIAS GENERATOR DBC 5.6
 
-# define variables for the user's name
-# swap user's first and last name
-# split name into letters
-# change the vowels to the next vowel 
-# change the consonants to the next consonants
-# combine letters
-# return the alias
+#Method to swap first and last name
+	#Take string from user and split it into words in an array
+	#Swap indexes of the array
+	#Split strings in the array into letters
+	#Print the array
+def name_swap
+	user_name = first_last.split(' ')
 
-##############
+end
+
+#Method to change vowels to next vowel
+	#Declare a new array of vowels, one letter per index
+	#See if name includes vowels, maybe use .include? method (string.inclue?(vowels[index]))
+	#If the vowel is present, change it to the next vowel in the vowel array (maybe use a block, .next method?)
+	#If a letter is now a vowel, do nothing
+	#Print the array
+
+#Method to change consonant to next consonant
+	#Declare a new array of consonants, one letter per index
+	#See if name includes consonants
+	#If consonant is present, change it to the next letter in the array
+	#If a letter is not a consonant, do nothing
+	#print the array
+
+############## Take 2 #############
 
 # define variable for the user's name and split it into first and last name
 
