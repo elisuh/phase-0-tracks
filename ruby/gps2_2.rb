@@ -9,6 +9,7 @@
   # print the list to the console by calling print list method
 # output: hash
 
+
 def new_list(list_items)
   grocery_list = {}
   index = 0
@@ -16,7 +17,6 @@ def new_list(list_items)
     grocery_list[list_items[index]] = 1 #add the list element at each index to new hash, assign it a value of 1
    index += 1
   end
-  #return grocery_list
   print_list(grocery_list)
 end
 
@@ -26,9 +26,13 @@ end
 # output: new hash with added item and quantity included
   
 
- def add_item(item, quantity)
+ def add_item(item, quantity, grocery_list)
+ 	#p quantity
+ 	if quantity == 0
+   		quantity = 1
+   	end
    grocery_list[item] = quantity.to_i
-   print_list(grocery_list)
+   grocery_list
  end
 
 # Method to remove an item from the list
@@ -36,9 +40,9 @@ end
 # steps: use .delete method, pass parameter through method
 # output: new hash with deleted item removed
 
-def delete_item(item)
+def delete_item(item, grocery_list)
   grocery_list.delete(item)
-  return grocery_list
+  grocery_list
 end
 
 # Method to update the quantity of an item
@@ -47,9 +51,9 @@ end
 #  loop through method until user is done updating items
 # output: new hash with updated quantity
 
-def update_quantity(item, quantity)
+def update_quantity(item, quantity, grocery_list)
   grocery_list[item] = quantity.to_i
-  return grocery_list
+  grocery_list
 end
 
 # Method to print a list and make it look pretty
@@ -62,24 +66,29 @@ def print_list(grocery_list)
   grocery_list.each {|item, quantity| puts "#{item}, qty: #{quantity}"}
 end
 
+#Driver Code
+
 puts "What would you like to add to your list?"
   list_items = gets.chomp.split(' ')
-  new_list(list_items)
+  grocery_list = new_list(list_items)
 
 puts "Would you like to add anything else?"
   list_items = gets.chomp.split(' ')
-  add_item(list_items[0], list_items[1].to_i)
-  print_list(grocery_list)
+  add_item(list_items[0], list_items[1].to_i, grocery_list)
 
 puts "Would you like to delete an item?"
-  list_items = gets.chomp.split(' ')
-  delete_item(list_items)
-  print_list(grocery_list)
+  item = gets.chomp
+  delete_item(item, grocery_list)
 
 puts "Update any quantities on your list. Enter the item:"
-  item = gets.chomp
-
+   item = gets.chomp
 puts "Enter the new quantity:"
-  quantity = gets.chomp
-  update_quantity(item, quantity)
-  print_list(grocery_list)
+   quantity = gets.chomp
+   update_quantity(item, quantity, grocery_list)
+
+print_list(grocery_list)
+
+
+
+
+
