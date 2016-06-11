@@ -63,9 +63,11 @@ scooter.destroy("laptop")
 
 # # # # # # # # # # # # # # # # # # 
 
+# DBC 6.2 - pairing session, classes
+
 class Baby
 
-  def initialize(x)
+  def initialize
     puts "Welcome, baby!"
   end
 
@@ -74,7 +76,7 @@ class Baby
   end
 
   def diaper_change
-    if poop == true
+    if poop = true
       puts "You gotta change that baby's diaper."
     else
       puts "This baby smells good."
@@ -83,34 +85,20 @@ class Baby
 
 end
 
-# Testing the new class we created
-# Seth = Baby.new
-
-# Use a loop to make 50 instances of your class.
-
-
-# x = 1
-# while x < 5
-#   babies = [Baby.new]
-#   x += 1
-#   p babies
-# end
-
-def string()
-	until x > 5
-	 	puts "This is a string." 
-	 	x += 1
- 	end
+# Make 50 new babies and store each of them in an empty array called "family"
+family = []
+5.times do 
+  family << Baby.new
 end
-array = []
-array << string(5)
+p family
 
-babies_array = []
-babies_array.each do { |i| something with method? [i] }
+# Call primal_scream method on each baby in the family array
+family.each do |child| 
+  child.primal_scream 
+end
 
-
-
-
-
-# babies [Welcome, baby!, Welcome, baby!, Welcome, baby!, Welcome, baby!, Welcome, baby!]
-# babies.each
+# There is poop! Call diaper_change method on each baby in the family
+poop = true
+family.each do |child|
+  child.diaper_change
+end
