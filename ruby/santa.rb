@@ -15,12 +15,41 @@ class Santa
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}!" 
 	end
+
+	def celebrate_birthday
+		@age += 1
+	end
+
+	# def get_mad_at(name)
+	# 	reindeer_ranking.index(name) = i
+	# 	reindeer_ranking.insert(8, reindeer_ranking.delete_at(i))
+	# end
+
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
 	
 end
 
-santas = []
-santa_genders = ["male", "female", "seahorse", "intergender", "agender"]
-santa_ethnicities =["Chinese", "Latino", "white", "Korean-American", "African-Canadian"]
-example_genders.length.times do |i|
-	santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
+##RELEASE 1 DIVER CODE
+
+# santas = []
+# santa_genders = ["male", "female", "seahorse", "intergender", "agender"]
+# santa_ethnicities =["Chinese", "Latino", "white", "Korean-American", "African-Canadian"]
+# example_genders.length.times do |i|
+# 	santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
+
+##RELEASE 2 DRIVER CODE
+santa = Santa.new("male", "Latino")
+#p santa.get_mad_at("Rudolph")
+p santa.gender = "female"
+p santa.celebrate_birthday
