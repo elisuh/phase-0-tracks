@@ -16,8 +16,12 @@
 #Initialize that number of wrestlers
 #Store new instances in an array
 #Ask users for parameters for personality, finishing move and body methods
+#When user is done, print instances of wrestlers
 
 class Wrestler
+	attr_reader :weight, :age, :hometown, :gender
+	attr_accessor :heel_face, :name, :charisma, :muscles, :attractive, :finishing_move, :technical
+
 	def initialize(name, weight, age, hometown, gender)
 		@name = name
 		@weight = weight.to_i
@@ -26,21 +30,21 @@ class Wrestler
 		@gender = gender
 	end
 	def personality(heel_face, charisma)
-			if heel_face == "heel"
+		@heel_face = heel_face
+			if @heel_face == "heel"
 				puts "#{@name} just cheated to win the championship!"
-			elsif heel_face == "face"
+			elsif @heel_face == "face"
 				puts "#{@name} gave all of the children in the front row high fives."
 			else puts "I didn't understand you, please type 'heel' or 'face'."
 			end
-		@heel_face = heel_face
 		@charisma = charisma.to_i
 	end
-	def body(muscles, attractiveness)
+	def body(muscles, attractive)
 		@muscles = muscles.to_i
 			if @muscles > 5
 				puts "Wow, #{@name} is a meaty #{@gender}!"
 			end
-		@attractiveness = attractiveness
+		@attractive = attractive
 	end
 	def wrestling_moves(finishing_move, technical)
 		@finishing_move = finishing_move
@@ -51,5 +55,5 @@ class Wrestler
 	end
 end
 
-
+#Driver code
 
