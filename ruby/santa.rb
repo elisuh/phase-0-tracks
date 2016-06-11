@@ -16,18 +16,22 @@ class Santa
 		puts "That was a good #{cookie}!" 
 	end
 
+#setter methods
+
 	def celebrate_birthday
 		@age += 1
 	end
 
-	# def get_mad_at(name)
-	# 	reindeer_ranking.index(name) = i
-	# 	reindeer_ranking.insert(8, reindeer_ranking.delete_at(i))
-	# end
+	def get_mad_at(name)
+		@reindeer_ranking = @reindeer_ranking.delete_if {|reindeer| reindeer == name}
+		@reindeer_ranking = @reindeer_ranking.insert(-1, name)
+	end
 
 	def gender=(new_gender)
 		@gender = new_gender
 	end
+
+#getter methods
 
 	def age
 		@age
@@ -50,6 +54,6 @@ end
 
 ##RELEASE 2 DRIVER CODE
 santa = Santa.new("male", "Latino")
-#p santa.get_mad_at("Rudolph")
+p santa.get_mad_at("Rudolph")
 p santa.gender = "female"
 p santa.celebrate_birthday
