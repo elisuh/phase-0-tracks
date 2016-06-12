@@ -37,5 +37,9 @@ describe Dancer do
   	expect(dancer.begin_next_dance).to eq "Now dancing with Mikhail Baryshnikov."
   	expect(dancer.card).to eq ["Anna Pavlova"]
   end
+  #new test for leap method
+  it "leaps" do
+  	expect(dancer.leap).to eq "*leaps*"
+  end
 
 end
