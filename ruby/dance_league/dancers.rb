@@ -1,5 +1,5 @@
 class Dancer
-	attr_accessor :age, :name, :card, :queue_dance_with, :begin_next_dance
+	attr_accessor :age, :name, :card, :queue_dance_with, :begin_next_dance, :leaps
 
 	def initialize(name, age)
 		@name = name
