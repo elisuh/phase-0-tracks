@@ -1,10 +1,10 @@
 class Dancer
-	attr_reader :name 
-	attr_accessor :age
+	attr_accessor :age, :name, :card, :queue_dance_with, :begin_next_dance
 
 	def initialize(name, age)
 		@name = name
 		@age = age.to_i
+		@card = []
 	end
 
 	def change_age(new_age)
@@ -19,13 +19,21 @@ class Dancer
 		p "*bows*"
 	end
 
-	def queue_dance_with
-	end
-
 	def card
+		@card
 	end
 
-	def begin_next_dance
+	def queue_dance_with(dancer)
+		@card << dancer
+	end
+
+	def begin_next_dance(person)
+		p "Now dancing with #{person}."
+		@card = @card.delete_if {|i| i == person}
+	end
+	#new method to make dancer leap
+	def leap
+		p "*leaps*"
 	end
 
 end
@@ -38,3 +46,18 @@ dancer.change_age(34)
 dancer.pirouette
 
 dancer.bow
+
+dancer.card
+
+dancer.queue_dance_with("Mikhail Baryshnikov")
+dancer.queue_dance_with("Anna Pavlova")
+
+dancer.begin_next_dance("Mikhail Baryshnikov")
+
+dancer.leap
+
+
+
+
+
+
