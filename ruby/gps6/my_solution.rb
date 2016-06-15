@@ -3,26 +3,28 @@
 # I worked on this challenge [by myself, with: ].
 # We spent [#] hours on this challenge.
 
-# EXPLANATION OF require_relative
-#
+# require relative is used to link files in the same directory, allowing the user to
+# provide a shorter file path, wheras 'require' might need the user to provide a more complete file path.
 #
 require_relative 'state_data'
 
 class VirusPredictor
-
+  #The initalize method takes three variables as parameters and assigns them to attributes
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
+    # puts STATE_DATA
   end
 
+  # This method takes two other methods and passes attrubutes defined in the initalized method
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
   private
-
+  # predicted deaths is a method that takes parameters and preforms calculations with them and returns a string with answers
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,6 +43,7 @@ class VirusPredictor
 
   end
 
+  # this method calculated the speed of spread by taking two parameters and preforming calculations, returns speed of spread
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -68,7 +71,14 @@ end
 
 # DRIVER CODE
  # initialize VirusPredictor for each state
-
+STATE_DATA.each do |state, data|
+  # state = "Alaska"
+  # data = {population_density: 10, population: 19847}
+  # 
+  # virus_predictor = VirusPredictor.new("Alabama", 100, 123134134)
+  virus_predictor = VirusPredictor.new(state, data[:population_density], data[:population])
+  virus_predictor.virus_effects
+end
 
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 alabama.virus_effects
