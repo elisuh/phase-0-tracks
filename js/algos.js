@@ -32,23 +32,19 @@ function longestString(array) { // define function with one parameter
 
 
 function matchObjects(object1, object2) {
-	var object1Keys = [];
-	var object1Values = [];
-	var object2Keys = [];
-	var object2Values = [];
-	for (var i = 0; i < object1.length; i++) { // This loop only works if both objects have the same number of key-value pairs
-		object1Keys = Object.keys(object1);
-		object1Values = Object.values(object1);
-		object2Keys = Object.keys(object2);
-		object2Values = Object.values(object2);
-		if (object1Keys[i] == object2Keys[i] && object1Values[i] == object2Values[i]) {
-			return true;
-		}
-		else {
-			return false;
-		}
+  for (var key1 in object1) {
+    var value1 = object1[key1];
 	}
-}
+  for (var key2 in object2) {
+    var value2 = object2[key2];
+	}
+    if (object1[key1] === object2[key2] && object1[value1] == object2[value2]) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 
 // DRIVER CODE FOR ALL RELEASES //
 
