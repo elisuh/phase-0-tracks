@@ -25,10 +25,30 @@ function longestString(array) { // define function with one parameter
 //Release 1 - Function that takes two objects and checks to see if the objects share at leastone key-value pair
 	// Define a function that takes two paramters (objects)
 	// Loop through the length of each object
-	// For all keys, ompare keys of object 1 with object 2 (maybe use .keys())
-	// For all values, compare values of object 1 with object 2 (maybe use .values())
+	// For all keys, ompare keys of object 1 with object 2 (maybe use .keys() and compare arrays)
+	// For all values, compare values of object 1 with object 2 (maybe use .values() and compare arrays)
 	// If  at least 1 key-value pair matches, return true
 	// If no key-values match, return false
+
+
+function matchObjects(object1, object2) {
+	var object1Keys = [];
+	var object1Values = [];
+	var object2Keys = [];
+	var object2Values = [];
+	for (var i = 0; i < object1.length; i++) { // This loop only works if both objects have the same number of key-value pairs
+		object1Keys = object1.keys();
+		object1Values = object1.values();
+		object2Keys = object2.keys();
+		object2Values = object2.values();
+		if (object1Keys[i] == object2Keys[i] && object1Values[i] == object2Values[i]) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
 
 // DRIVER CODE FOR ALL RELEASES //
 
