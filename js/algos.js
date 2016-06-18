@@ -58,10 +58,11 @@ function randomArray(length) {
 	var string = "";
     var letters = "Aabcdefghijklmnopqrstuvwxyz";
 
-    for (var i = 0; i <= length; i++ ) {
+    for (var i = 0; i <= length; i++) {
     	string += letters.charAt(Math.floor(Math.random() * letters.length));
+    	array.push(string);
     }
-    var newArray = array.push(string);
+    return array;
 }
 // DRIVER CODE FOR ALL RELEASES //
 
@@ -72,12 +73,17 @@ console.log(cats);
 //Release 1 - true
 var object1 = {name: "Steven", age: 54} 
 var object2 = {name: "Tamir", age: 54}
-var test = matchObjects(object1, object2);
-console.log(test);
+var test1 = matchObjects(object1, object2);
+console.log(test1);
 
 //Release 1 - false
 var object1 = {name: "Steven", age: 59} 
 var object2 = {name: "Tamir", age: 54}
-var test = matchObjects(object1, object2);
-console.log(test);
+var test2 = matchObjects(object1, object2);
+console.log(test2);
+
+//Release 2 - basic driver code
+var test3 = randomArray(5);
+console.log(test3);
+
 
