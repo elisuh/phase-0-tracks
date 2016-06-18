@@ -1,5 +1,7 @@
 // DBC 7.3
 
+// FUNCTIONS FOR ALL RELEASES //
+
 // Release 0 - Function that returns the longest string in an array
 	// Define a function that takes one parameter (an array)
 	// Determine the length of the array
@@ -8,11 +10,11 @@
 	// Return the value of that index
 
 
-function longestString(array) {
-	var longest = 0; // define index length
-	var longestString = ""; //define empty string
+function longestString(array) { // define function with one parameter
+	var longest = 0; // define longest index length as integer
+	var longestString = ""; //define empty string as longest string
 	for (var i = 0; i < array.length; i++) { // for the length of the array do the following
-		if (array[i].length > longest) { // the length of each index item is longer than placeholder variable
+		if (array[i].length > longest) { // if the length of each index item is longer than placeholder variable
 			longest = array[i].length; // longest variable is equal to array index length
 			longestString = array[i]; //longest string is equal to array index value
 		} 
@@ -20,6 +22,17 @@ function longestString(array) {
 	return longestString; // return longest string
 }
 
-// Driver code
+//Release 1 - Function that takes two objects and checks to see if the objects share at leastone key-value pair
+	// Define a function that takes two paramters (objects)
+	// Loop through the length of each object
+	// For all keys, ompare keys of object 1 with object 2 (maybe use .keys())
+	// For all values, compare values of object 1 with object 2 (maybe use .values())
+	// If  at least 1 key-value pair matches, return true
+	// If no key-values match, return false
+
+// DRIVER CODE FOR ALL RELEASES //
+
+// Release 0 
 var cats = longestString(["Sammy", "Bast", "BestKittenEver"]);
 console.log(cats);
+
