@@ -37,10 +37,10 @@ function matchObjects(object1, object2) {
 	var object2Keys = [];
 	var object2Values = [];
 	for (var i = 0; i < object1.length; i++) { // This loop only works if both objects have the same number of key-value pairs
-		object1Keys = object1.keys();
-		object1Values = object1.values();
-		object2Keys = object2.keys();
-		object2Values = object2.values();
+		object1Keys = Object.keys(object1);
+		object1Values = Object.values(object1);
+		object2Keys = Object.keys(object2);
+		object2Values = Object.values(object2);
 		if (object1Keys[i] == object2Keys[i] && object1Values[i] == object2Values[i]) {
 			return true;
 		}
