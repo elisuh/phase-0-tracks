@@ -10,13 +10,13 @@
 	// Return the value of that index
 
 
-function longestString(array) { // define function with one parameter
+function longestString(yourArray) { // define function with one parameter
 	var longest = 0; // define longest index length as integer
 	var longestString = ""; //define empty string as longest string
-	for (var i = 0; i < array.length; i++) { // for the length of the array do the following
-		if (array[i].length > longest) { // if the length of each index item is longer than placeholder variable
-			longest = array[i].length; // longest variable is equal to array index length
-			longestString = array[i]; //longest string is equal to array index value
+	for (var i = 0; i < yourArray.length; i++) { // for the length of the array do the following
+		if (yourArray[i].length > longest) { // if the length of each index item is longer than placeholder variable
+			longest = yourArray[i].length; // longest variable is equal to array index length
+			longestString = yourArray[i]; //longest string is equal to array index value
 		} 
 	}
 	return longestString; // return longest string
@@ -47,18 +47,23 @@ function matchObjects(object1, object2) {
   }
 
 // Release 2 - a function that takes an integer for length, and creates array of strings of the length.
-	// Define a function that takes one parameter (an integer)
-	// Within the function, define an empty array
-	// Using Math.random() to generate X number of strings
-	// Add strings to empty array
-	// Return the full array
+	// 2.1
+		// Define a function that takes one parameter (an integer)
+		// Within the function, define an empty array
+		// Using Math.random() to generate X number of strings
+		// Add strings to empty array
+		// Return the full array
+	// 2.2
+		// Create a for loop that loops 10 times
+		// Run randomArray function
+		// Pass randomArray array as parameter through longestString function
 
 function randomArray(length) {
 	var array = [];
 	var string = "";
-    var letters = "Aabcdefghijklmnopqrstuvwxyz";
+    var letters = "abcdefghijklmnopqrstuvwxyz";
 
-    for (var i = 0; i <= length; i++) {
+    for (var i = 0; i < length; i++) {
     	string += letters.charAt(Math.floor(Math.random() * letters.length));
     	array.push(string);
     }
@@ -82,8 +87,13 @@ var object2 = {name: "Tamir", age: 54}
 var test2 = matchObjects(object1, object2);
 console.log(test2);
 
-//Release 2 - basic driver code
+//Release 2 - Driver code to test release 2.1
 var test3 = randomArray(5);
 console.log(test3);
 
-
+//Release 2 - Driver code to test release 2.2
+for (var i = 0; i < 10; i++) {
+	var length = 6;
+	var testArray = randomArray(length);
+	longestString(testArray);
+}
