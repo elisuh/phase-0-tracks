@@ -9,8 +9,17 @@
 
 
 function longestString(array) {
-	for (var i = 0; i < array.length; i++) {
-		// find length of each index
+	var longest = 0; // define index length
+	var longestString = ""; //define empty string
+	for (var i = 0; i < array.length; i++) { // for the length of the array do the following
+		if (array[i].length > longest) { // the length of each index item is longer than placeholder variable
+			longest = array[i].length; // longest variable is equal to array index length
+			longestString = array[i]; //longest string is equal to array index value
+		} 
 	}
-	// return index of longest string
+	return longestString; // return longest string
 }
+
+// Driver code
+var cats = longestString(["Sammy", "Bast", "BestKittenEver"]);
+console.log(cats);
