@@ -46,6 +46,23 @@ function matchObjects(object1, object2) {
     }
   }
 
+// Release 2 - a function that takes an integer for length, and creates array of strings of the length.
+	// Define a function that takes one parameter (an integer)
+	// Within the function, define an empty array
+	// Using Math.random() to generate X number of strings
+	// Add strings to empty array
+	// Return the full array
+
+function randomArray(length) {
+	var array = [];
+	var string = "";
+    var letters = "Aabcdefghijklmnopqrstuvwxyz";
+
+    for (var i = 0; i <= length; i++ ) {
+    	string += letters.charAt(Math.floor(Math.random() * letters.length));
+    }
+    var newArray = array.push(string);
+}
 // DRIVER CODE FOR ALL RELEASES //
 
 // Release 0 
