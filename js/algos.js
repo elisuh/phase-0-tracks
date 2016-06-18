@@ -52,3 +52,15 @@ function matchObjects(object1, object2) {
 var cats = longestString(["Sammy", "Bast", "BestKittenEver"]);
 console.log(cats);
 
+//Release 1 - true
+var object1 = {name: "Steven", age: 54} 
+var object2 = {name: "Tamir", age: 54}
+var test = matchObjects(object1, object2);
+console.log(test);
+
+//Release 1 - false
+var object1 = {name: "Steven", age: 59} 
+var object2 = {name: "Tamir", age: 54}
+var test = matchObjects(object1, object2);
+console.log(test);
+
