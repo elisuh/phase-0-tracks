@@ -1,0 +1,63 @@
+ DBC 8.3 challenge - Release 2
+
+ 1. 
+ Input: 
+ SELECT * FROM authors;
+ Output: 
+Lisa Kleypas|Marrying Winterborne|20|1
+|Joe Hill|The Fireman|4|1
+|Marie Lu|The Midnight Star|6|2
+|Dean Koontz|Ashley Bell|30|2
+
+2. 
+Input: 
+UPDATE authors SET number_books_published=33 WHERE name="Dean Koontz";
+Output:
+none
+
+3.
+Input:
+SELECT authors.name, authors.book_title, authors.number_books_published, authors.publisher_id, publishers.id, publishers.name FROM authors JOIN publishers ON authors.publisher_id = publishers.id;
+Output:
+Lisa Kleypas|Marrying Winterborne|20|1|1|HarperCollins
+Joe Hill|The Fireman|4|1|1|HarperCollins
+Marie Lu|The Midnight Star|6|2|2|Penguin/Random House
+Dean Koontz|Ashley Bell|33|2|2|Penguin/Random House
+
+4. 
+Input:
+SELECT authors.name, authors.book_title, publishers.name FROM authors JOIN publishers ON authors.publisher_id = publishers.id;
+Output:
+Lisa Kleypas|Marrying Winterborne|HarperCollins
+Joe Hill|The Fireman|HarperCollins
+Marie Lu|The Midnight Star|Penguin/Random House
+Dean Koontz|Ashley Bell|Penguin/Random House
+
+5. 
+Input:
+DELETE FROM authors WHERE publisher_id=2;
+Output (after selecting all from authors table):
+|Lisa Kleypas|Marrying Winterborne|20|1
+|Joe Hill|The Fireman|4|1
+
+Release 3 - joins
+
+1. Inner Join (same as Join)
+Input:
+SELECT authors.name, authors.book_title, authors.number_books_published
+FROM authors
+INNER JOIN publishers
+ON authors.publisher_id=publishers.id; 
+Output:
+Lisa Kleypas|Marrying Winterborne|20
+Joe Hill|The Fireman|4
+
+2. Left Join
+Input:
+SELECT book_title
+FROM authors
+LEFT JOIN publishers
+ON authors.book_title=publishers.id;
+Output:
+Marrying Winterborne
+The Fireman
