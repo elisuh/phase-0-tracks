@@ -1,0 +1,30 @@
+8.4 with Tony 
+
+1. 
+Input:
+SELECT reviews.stars, reviews.comment, reviews.business_id, reviews.user_id, businesses.name, users.first_name, users.last_name FROM reviews LEFT JOIN businesses ON reviews.business_id = businesses.id LEFT JOIN users ON reviews.user_id = users.id;
+Output: 
+2|Terrible service|1|1|Grundy Hollow|Bradford|Pitt
+4|The owner was very nice|1|2|Grundy Hollow|Mandy|Kaling
+5|Best business ever wow!|3|2|The Beagle Nightclub|Mandy|Kaling
+1|I almost died here|2|1|Amir's Towing|Bradford|Pitt
+1|I almost died here too!|2|3|Amir's Towing|Angela|Jolie
+
+2.
+Input:
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews LEFT JOIN businesses ON reviews.business_id = businesses.id LEFT JOIN users ON reviews.user_id = users.id;
+Output:
+Bradford|Pitt|Grundy Hollow|2|Terrible service
+Mandy|Kaling|Grundy Hollow|4|The owner was very nice
+Mandy|Kaling|The Beagle Nightclub|5|Best business ever wow!
+Bradford|Pitt|Amir's Towing|1|I almost died here
+Angela|Jolie|Amir's Towing|1|I almost died here too!
+
+SELECT * FROM reviews LEFT JOIN businesses ON reviews.business_id = 2 LEFT JOIN users ON reviews.user_id = users.id;
+
+3. 
+Input:
+SELECT * FROM reviews LEFT JOIN businesses ON reviews.business_id = businesses.id LEFT JOIN users ON reviews.user_id = users.id WHERE reviews.business_id = 2;
+Output: 
+4|1|I almost died here|2|1|2|Amir's Towing|1|Bradford|Pitt
+5|1|I almost died here too!|2|3|2|Amir's Towing|3|Angela|Jolie
