@@ -1,4 +1,5 @@
 # Create program that allows users to check and see if pet had been fed
+require 'rubygems'
 require 'sqlite3'
 
 # create database
@@ -17,15 +18,16 @@ create_table = <<-SQL
     name VARCHAR(255),
     animal VARCHAR(255),
     feeding_time VARCHAR(255),
-    fed BOOLEAN
+    fed VARCHAR(255)
   )
 SQL
 
 # create a table 
 db.execute(create_table)
 
-#Add pet info
+# Add pet info
 def add_pet(db, name, animal, feeding_time, fed)
+	puts feeding_time.class
 	db.execute("INSERT INTO pets (name, animal, feeding_time, fed) VALUES (?, ?, ?, ?)", [name, animal, feeding_time, fed])
 end
 
@@ -42,11 +44,16 @@ puts "What type of animal are they?"
 animal = gets.chomp
 puts "What time(s) should they be fed?"
 feeding_time = gets.chomp
-fed = false
+fed = "false"
 
-# 2.times do 
-# 	add_pet(db, name, animal, feeding_time, fed)
+# 1.times do 
+	add_pet(db, name, animal, feeding_time, fed)
 # end
+
+# puts name
+# puts animal
+# puts feeding_time
+# puts fed
 
 
 #Allow user to exit when done
