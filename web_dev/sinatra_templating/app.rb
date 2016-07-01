@@ -1,3 +1,4 @@
+
 # require gems
 require 'sinatra'
 require 'sqlite3'
@@ -25,3 +26,14 @@ post '/students' do
 end
 
 # add static resources
+
+
+#ERB template to delete student 
+get '/students/remove' do 
+  erb :remove_student
+end 
+
+post '/student' do
+  db.execute("DELETE FROM students WHERE name = ?", [params['name']] )
+  redirect '/'
+end
