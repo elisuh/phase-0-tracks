@@ -1,0 +1,14 @@
+#cesaro {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 2%;
+  z-index: 0;
+}
+
+#kiss {
+  position: relative;
+  visibility: hidden;
+  margin-left: 52%;
+  margin-top: 10%;
+  z-index: 1;
+}
